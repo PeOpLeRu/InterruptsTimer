@@ -85,6 +85,7 @@ void loop()
             TIMSK2 = temp;
             
             temp = TIMSK2 ^ 0x02; // Инвертирование состояния Timer/Counter2, Output Compare A Match Interrupt Enable
+	    TIMSK2 = temp;
             
             TCCR2A ^= (1 << WGM21);  // Инвертирование состояния CTC режима
             
