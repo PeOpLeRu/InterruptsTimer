@@ -1,5 +1,7 @@
 // Написать свою реализацию функции millis()
 
+// 
+
 volatile uint32_t counter = 0;
 
 uint32_t my_millis()
@@ -7,7 +9,7 @@ uint32_t my_millis()
   return counter;
 }
 
-ISR(TIMER1_COMPA_vect)   // Прерывание на переполнение 1 таймера
+ISR(TIMER1_COMPA_vect)   // Прерывание на сравнение 1 таймера со значением
 {
     ++counter;
 }
